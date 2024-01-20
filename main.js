@@ -1,5 +1,16 @@
 import "./style.css";
 import bateryBg from "./drumBackground.jpg";
+import aplaudir from "./src/sound/aplaudir.wav";
+import boom from "./src/sound/boom.wav";
+import hihat from "./src/sound/hihat.wav";
+import kick from "./src/sound/kick.wav";
+import openhat from "./src/sound/openhat.wav";
+import ride from "./src/sound/ride.wav";
+import snare from "./src/sound/snare.wav";
+import tink from "./src/sound/tink.wav";
+import tom from "./src/sound/tom.wav";
+import { removeTransition } from "./app";
+import { playSound } from "./app";
 
 document.querySelector("#bateryApp").innerHTML = `
 <header>
@@ -43,15 +54,16 @@ document.querySelector("#bateryApp").innerHTML = `
     </div>
   </div>
 
-  <audio data-key="65" src="soundsDrum/aplaudir.wav"></audio>
-  <audio data-key="83" src="soundsDrum/hihat.wav"></audio>
-  <audio data-key="68" src="soundsDrum/kick.wav"></audio>
-  <audio data-key="70" src="soundsDrum/openhat.wav"></audio>
-  <audio data-key="71" src="soundsDrum/boom.wav"></audio>
-  <audio data-key="72" src="soundsDrum/ride.wav"></audio>
-  <audio data-key="74" src="soundsDrum/snare.wav"></audio>
-  <audio data-key="75" src="soundsDrum/tom.wav"></audio>
-  <audio data-key="76" src="soundsDrum/tink.wav"></audio>
+  <audio data-key="65" src="${aplaudir}"></audio>
+  <audio data-key="83" src="${boom}"></audio>
+  <audio data-key="68" src="${hihat}"></audio>
+  <audio data-key="70" src="${kick}"></audio>
+  <audio data-key="71" src="${openhat}"></audio>
+  <audio data-key="72" src="${ride}"></audio>
+  <audio data-key="74" src="${snare}"></audio>
+  <audio data-key="75" src="${tink}"></audio>
+  <audio data-key="76" src="${tom}"></audio>
+  
 </header>
 
 `;
